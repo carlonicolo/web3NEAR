@@ -1,6 +1,17 @@
 [package]
-name = "contract"
+name = "learn-programming-contract"
 version = "0.1.0"
+authors = ["K4rl1t0s"]
 edition = "2021"
 
 [dependencies]
+near-sdk = "4.0.0-pre.4"
+hex = "0.4.3"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
